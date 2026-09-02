@@ -849,3 +849,317 @@ a {
         padding: 30px 10px;
     }
 }
+/* =========================================
+   DIGITAL PAGE
+========================================= */
+
+.digital-hero {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 72px);
+    margin-top: 72px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.digital-hero img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: saturate(0.8);
+}
+
+
+/* Orange / red overlay */
+
+.digital-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(30, 70, 150, 0.78);
+}
+
+
+/* DIGITAL lettering */
+
+.digital-title {
+    position: relative;
+    z-index: 2;
+
+    font-size: clamp(100px, 18vw, 300px);
+    font-weight: 400;
+    letter-spacing: -0.07em;
+    line-height: 0.8;
+
+    color: rgba(255, 255, 255, 0.92);
+
+    user-select: none;
+}
+
+/* little decorative crosses */
+
+.digital-hero::before,
+.digital-hero::after {
+    content: "+";
+    position: absolute;
+    z-index: 3;
+
+    color: white;
+    font-size: 34px;
+    font-weight: 200;
+}
+
+.digital-hero::before {
+    top: 45px;
+    left: 45px;
+}
+
+.digital-hero::after {
+    top: 45px;
+    right: 45px;
+}
+
+
+/* =========================================
+   PROJECT SECTION
+========================================= */
+
+.digital-projects {
+    width: min(1200px, 88%);
+    margin: 120px auto 160px;
+}
+
+
+/* Intro */
+
+.digital-intro {
+    margin-bottom: 70px;
+}
+
+.small-label {
+    font-size: 12px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    opacity: 0.55;
+}
+
+.digital-intro h1 {
+    font-size: clamp(50px, 7vw, 90px);
+    line-height: 0.9;
+    margin: 0;
+    letter-spacing: -0.05em;
+}
+
+
+/* =========================================
+   PROJECT CARD
+========================================= */
+
+.digital-project {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+
+    margin-bottom: 120px;
+}
+
+
+/* Image */
+
+.project-image {
+    position: relative;
+    width: 100%;
+    height: min(65vw, 650px);
+
+    overflow: hidden;
+    background: #e9edf2;
+}
+
+
+.project-image video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    transition: transform 0.7s cubic-bezier(.2,.7,.2,1);
+}
+
+
+/* Hover */
+
+.digital-project:hover .project-image video {
+    transform: scale(1.035);
+}
+
+
+/* Number */
+
+.project-number {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+
+    font-size: 13px;
+    letter-spacing: 0.08em;
+
+    color: white;
+    z-index: 3;
+}
+
+
+/* Arrow */
+
+.project-arrow {
+    position: absolute;
+    right: 25px;
+    bottom: 25px;
+
+    width: 58px;
+    height: 58px;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.9);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 28px;
+
+    transition: transform 0.3s ease;
+}
+
+.digital-project:hover .project-arrow {
+    transform: translate(5px, -5px);
+}
+
+
+/* Text */
+
+.project-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+
+    padding-top: 20px;
+
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    padding-bottom: 20px;
+}
+
+.project-info h2 {
+    font-size: clamp(28px, 4vw, 52px);
+    letter-spacing: -0.04em;
+    margin: 0;
+}
+
+.project-info p {
+    font-size: 14px;
+    opacity: 0.55;
+    margin: 0;
+}
+
+
+/* =========================================
+   SEECAFE PREVIEW
+========================================= */
+
+.seecafe-preview {
+    background: #f1eee7;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.seecafe-placeholder {
+    text-align: center;
+}
+
+.seecafe-placeholder span {
+    display: block;
+
+    font-size: clamp(70px, 13vw, 190px);
+    font-weight: 800;
+    letter-spacing: -0.08em;
+}
+
+.seecafe-placeholder small {
+    display: block;
+
+    margin-top: 10px;
+
+    font-size: 12px;
+    letter-spacing: 0.2em;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    padding: 50px 6%;
+    font-size: 12px;
+    opacity: 0.5;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .digital-hero {
+        height: 65vh;
+        min-height: 450px;
+    }
+
+    .digital-title {
+        font-size: 25vw;
+    }
+
+    .digital-projects {
+        width: 90%;
+        margin-top: 80px;
+    }
+
+    .project-image {
+        height: 115vw;
+    }
+
+    .project-info {
+        display: block;
+    }
+
+    .project-info p {
+        margin-top: 8px;
+    }
+
+}
+.digital-subtitle {
+    position: absolute;
+    z-index: 3;
+
+    margin-top: 230px;
+
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+.project-image video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    pointer-events: none;
+}
